@@ -2,17 +2,10 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "abdullahosama911/flask-app"
+        IMAGE_NAME = "ahmedshams8/flask-app"
     }
 
     stages {
-
-        stage('Clone Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Abdullah5497/DockerTask'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
